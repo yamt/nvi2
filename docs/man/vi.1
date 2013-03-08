@@ -1595,6 +1595,11 @@ and
 characters to move forward to the next
 .Ar shiftwidth
 column boundary.
+If
+.B expandtab
+is set, only insert
+.I <space>
+characters.
 .Pp
 .It Aq Cm erase
 .It Aq Cm control-H
@@ -2298,6 +2303,14 @@ The tenths of a second
 waits for a subsequent key to complete an
 .Aq escape
 key mapping.
+.It Cm expandtab , et Bq off
+Prevent the use of
+.I <tab>
+characters in leading whitespace when shifting text, autoindenting,
+indenting with
+.BR "<control-T>" ,
+or outdenting with
+.BR "<control-D>" .
 .It Cm exrc , ex Bq off
 Read the startup files in the local directory.
 .It Cm extended Bq off
